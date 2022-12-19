@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery || class -2 </title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .box{
+        background-color: #F5F5F5;
+        height: 300px;
+        width: 600px;
+    }
+    .buttons{
+        margin: 36px;
+    }
+    #content{
+        margin: 0 36px 36px 36px;
+        text-align: justify;
+    }
+    #content h2{
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="buttons">
+            <button id="slideup" >Slid up</button>
+            <button id="slidedown" >Slid down</button>
+            <button id="slidetoggle" >Slid Toggle</button>
+        </div>
+        <div id="content">
+            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quo veniam laboriosam quas quasi laborum recusandae, harum nobis, quos perferendis dignissimos sit itaque non aspernatur, magnam odit. Dolor cumque officiis minima amet excepturi rerum ad maiores commodi animi, iusto pariatur eos repudiandae molestias totam odit soluta, ab maxime nostrum at similique impedit tempore. Voluptates, a porro excepturi culpa earum ipsa laboriosam enim similique dolores aliquam eaque obcaecati possimus pariatur quo ullam sunt illo quis. Dolores.</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#slideup").click(function(){
+                $("#content").slideUp(1000);
+            });
+            $("#slidedown").click(function(){
+                $("#content").slideDown(1000);
+            });
+            $("#slidetoggle").click(function(){
+                $("#content").slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+</html>
